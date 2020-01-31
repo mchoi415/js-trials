@@ -12,11 +12,23 @@ function printIndices(items) {
 
 // 2. everyOtherItem
 function everyOtherItem(items) {
-  // Replace this with your code
+  const result = [];
+
+  for (const idx in items) {
+    if (idx % 2 === 0) {
+      result.push(items[idx]);
+    }
+  }
+
+  return result;
 }
 
 
 // 3. smallestNItems
 function smallestNItems(items, n) {
-  // Replace this with your code
+  const sortNumber = items.sort((a, b) => b - a);
+  const sliceList = sortNumber.slice(0, n);
+
+
+  console.log(sliceList);
 }
