@@ -19,10 +19,10 @@ function getFullName(firstName, lastName) {
 
 function calculateTotal(basePrice, state, tax=0.05) {
   let subtotal = basePrice * (1 + tax);
- // let fee;
+  let fee;
 
   if (state === 'CA') {
-    let fee = 0.03 * subtotal;
+    fee = 0.03 * subtotal;
   } else if (state === 'PA') {
     fee = 2;
   } else if (state === 'MA') {
